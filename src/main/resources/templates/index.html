@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <div><p>Paso [1]: Seleccione los productos</p></div>
+    <div>
+        <div>
+            <div><p>7 €</p></div>
+            <div></div>
+            <div><a th:href="@{/updateSession?id=Morbius&op=add&price=7}">+</a><p>[[${Morbius}]]</p><a th:href="@{/updateSession?id=Morbius&op=substract&price=7}">-</a></div>
+        </div>
+        <div>
+            <div><p>6 €</p></div>
+            <div></div>
+            <div><a th:href="@{/updateSession?id=JurassicWorld&op=add&price=6}">+</a><p>[[${JurassicWorld}]]</p><a th:href="@{/updateSession?id=JurassicWorld&op=substract&price=6}">-</a></div>
+        </div>
+        <div>
+            <div><p>5€</p></div>
+            <div></div>
+            <div><a th:href="@{/updateSession?id=Lightyear&op=add&price=5}">+</a><p>[[${Lightyear}]]</p><a th:href="@{/updateSession?id=Lightyear&op=substract&price=5}">-</a></div>
+        </div>
+        <div>
+            <div><p>8€</p></div>
+            <div></div>
+            <div><a th:href="@{/updateSession?id=Dumbledorf&op=add&price=8}">+</a><p>[[${Dumbledorf}]]</p><a th:href="@{/updateSession?id=Dumbledorf&op=substract&price=8}">-</a></div>
+        </div>
+    </div>
+    <div>
+        <div><div><p>Nº Productos</p></div>
+        <div><p>[[${NumProductos}]]</p></div>     
+        </div>
+        <div><div><p>Total a pagar</p></div>
+             <div><p>[[${TotalPagar}]]€</p></div>
+        </div>
+    </div>
+</body>
+</html>
